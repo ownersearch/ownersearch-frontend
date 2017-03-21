@@ -17,7 +17,7 @@ export default function configureStore(initialState, history) {
   let store;
 
   if (isClient && isDebug) {
-    middleware.push(createLogger());
+    middleware.push(createLogger({collapsed: true}));
     store = createStore(rootReducer, initialState, compose(
       applyMiddleware(...middleware),
       typeof window === 'object' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : f => f

@@ -1,0 +1,12 @@
+.header {
+  padding-top: 55px;
+  position: relative;
+  background: blue;
+  height: 30vh;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}

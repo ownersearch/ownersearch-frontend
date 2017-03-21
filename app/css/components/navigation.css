@@ -2,18 +2,35 @@
 @import '../common/typography';
 
 .navigation {
-  padding: 0 28px;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 55px;
 }
 
 .item {
   display: inline-block;
   text-decoration: none;
-  padding: 16px 32px;
-  color: var(--colorBlack);
+  padding: 10px;
+  color: white;
 }
 
 .logo {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
   font-size: var(--fontHuge);
+}
+
+.spacer{
+  flex: 1;
 }
 
 .active {

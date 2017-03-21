@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { manualLogin, signUp, toggleLoginMode } from '../actions/users';
 import styles from '../css/components/login';
 import hourGlassSvg from '../images/hourglass.svg';
+import Header from '../components/Header';
 
 const cx = classNames.bind(styles);
 
@@ -68,47 +69,46 @@ class LoginOrRegister extends Component {
     const { isWaiting, message, isLogin } = this.props.user;
 
     return (
-      <div
-        className={cx('login', {
-          waiting: isWaiting
-        })}
-      >
-        <div className={cx('container')}>
-          { this.renderHeader() }
-          <img className={cx('loading')} alt="loading" src={hourGlassSvg} />
-          <div className={cx('email-container')}>
-            <form onSubmit={this.handleOnSubmit}>
-              <input
-                className={cx('input')}
-                type="email"
-                ref="email"
-               placeholder="email"
-              />
-              <input
-                className={cx('input')}
-                type="password"
-               ref="password"
-                placeholder="password"
-              />
-              <div className={cx('hint')}>
-                <div>Hint</div>
-                <div>email: example@ninja.com password: ninja</div>
-              </div>
-              <p
-                className={cx('message', {
-                'message-show': message && message.length > 0
-              })}>{message}</p>
-              <input
+      <div>
+        <Header />
+        <div className={cx('login', { waiting: isWaiting })}>
+          <div className={cx('container')}>
+            { this.renderHeader() }
+            <img className={cx('loading')} alt="loading" src={hourGlassSvg} />
+            <div className={cx('email-container')}>
+              <form onSubmit={this.handleOnSubmit}>
+                <input
+                  className={cx('input')}
+                  type="email"
+                  ref="email"
+                 placeholder="email"
+                />
+                <input
+                  className={cx('input')}
+                  type="password"
+                 ref="password"
+                  placeholder="password"
+                />
+                <div className={cx('hint')}>
+                  <div>Hint</div>
+                  <div>email: example@ninja.com password: ninja</div>
+                </div>
+                <p
+                  className={cx('message', {
+                  'message-show': message && message.length > 0
+                })}>{message}</p>
+                <input
+                  className={cx('button')}
+                  type="submit"
+                  value={isLogin ? 'Login' : 'Register'} />
+              </form>
+            </div>
+            <div className={cx('google-container')}>
+              <h1 className={cx('heading')}>Google Login Demo</h1>
+              <a
                 className={cx('button')}
-                type="submit"
-                value={isLogin ? 'Login' : 'Register'} />
-            </form>
-          </div>
-          <div className={cx('google-container')}>
-            <h1 className={cx('heading')}>Google Login Demo</h1>
-            <a
-              className={cx('button')}
-              href="/auth/google">Login with Google</a>
+                href="/auth/google">Login with Google</a>
+            </div>
           </div>
         </div>
       </div>

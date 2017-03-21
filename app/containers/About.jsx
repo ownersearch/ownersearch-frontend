@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import styles from 'css/components/about';
+import Header from '../components/Header';
 
 const cx = classNames.bind(styles);
 
@@ -12,6 +13,7 @@ const cx = classNames.bind(styles);
 const About = () => {
   return (
     <div className={cx('about')}>
+      <Header />
       <h1 className={cx('header')}>About Ninja Ocean</h1>
       <div className={cx('description')}>
         <p>Imagine an ocean of ninjas. Now think of it as a metaphor.<br />
