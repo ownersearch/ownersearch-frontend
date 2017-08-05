@@ -1,0 +1,73 @@
+@value colors: "styles/colors.css";
+@value primary from colors;
+
+.header {
+//  position: absolute;
+//  z-index: 100;
+//  top: 0;
+//  left: 0;
+//  right: 0;
+  color: white;
+  background: primary;
+  transition: background 0.3s ease;
+}
+
+.inner {
+  @media (max-width: 599px) {
+    height: 50px;
+  }
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+}
+
+.button {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 20px;
+  transition: 0.3s ease all;
+  color: #4b89dc;
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.chat {
+  img:last-child {
+    display: none;
+  }
+}
+
+.title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.logo {
+  padding: 0 20px;
+  height: 100%;
+  transition: 0.3s ease all;
+  img {
+    height: 25px;
+    @media (max-width: 599px) {
+      height: 20px;
+    }
+  }
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.active {
+  img:first-child {
+    display: none;
+  }  
+  img:last-child {
+    display: inline-block;
+  }
+}
+

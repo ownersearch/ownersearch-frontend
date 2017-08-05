@@ -1,0 +1,22 @@
+.sidebar {
+  width: 380px;
+  background: white;
+  padding: 30px;
+  @media (max-width: 599px) {
+    width: 100%;
+  }
+}
+
+.tag {
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+
+
+  > div {
+    margin-left: 15px;
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+}

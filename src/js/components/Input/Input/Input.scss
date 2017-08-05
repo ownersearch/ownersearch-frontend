@@ -1,0 +1,68 @@
+@value colors: "styles/colors.css";
+@value zRed, zGreen from colors;
+
+.outer {
+  padding-top: 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.standard {
+  display: block;
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #e2e2e2;
+  transition: 0.3s ease all;
+  width: 100%;
+  font-size: 20px;
+  color: black;
+  height: 50px;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-bottom: 2px solid zGreen;
+  }
+  &.white {
+    border-color: rgba(255, 255, 255, 0.8);
+    color: white;
+    
+    &::-webkit-contacts-auto-fill-button {
+      color: white;
+    }
+  }
+  
+  &[type='password'] {
+    color: zGreen;
+    font-size: 30px;
+  }
+}
+
+.label {
+  color: #434a54;
+  font-size: 12px;
+  margin-bottom: 2px;
+  transition: 0.2s ease all;
+  position: absolute;
+  top: 0px;
+  &.white {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  &.inactive {
+    top: 32px;
+    font-size: 14px;
+  }
+}
+
+.invalid {
+  .standard, input {
+    border-bottom: 2px solid zRed !important;
+    &:focus {
+      border-bottom: 2px solid zRed !important;
+    }
+    &[type='password'] {
+      color: zRed;
+    }
+  }
+}

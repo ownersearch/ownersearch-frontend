@@ -1,0 +1,19 @@
+@value colors: "styles/colors.css";
+@value zYellow, primary from colors;
+
+.range {
+  > span {
+    padding: 8px;
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    margin: 0 2px;
+    display: inline-block;
+    text-align: center;
+  }
+}
+.active {
+  background: zYellow;
+  color: primary;
+  border-radius: 50%;
+}

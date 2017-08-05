@@ -1,0 +1,23 @@
+.card {
+  padding: 20px 20px 25px 30px;
+  min-height: 180px;
+  position: relative;
+  background: white;
+  .bar {
+    &.bottom {
+      height: 6px;
+      width: 100%;
+      bottom: 0;
+      right: 0;
+      top: auto;
+    }
+    width: 6px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    @media (max-width: 599px) {
+      width: 4px;
+    }
+  }
+}

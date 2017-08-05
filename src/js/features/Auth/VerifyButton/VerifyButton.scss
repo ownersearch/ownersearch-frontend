@@ -1,0 +1,28 @@
+@value colors: "styles/colors.css";
+@value zGreen, zYellow, zRed from colors;
+
+.button {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  padding: 5px;
+  padding-right: 0px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.verified .dot {
+  background: zGreen;
+}
+
+.mail .dot {
+  background: zYellow;
+}
+
+.unverified .dot {
+  background: zRed;
+}

@@ -1,0 +1,20 @@
+@value colors: "styles/colors.css";
+@value zLightBlue, tertiary from colors;
+
+.dot {
+  background: zLightBlue;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  margin: 0 5px;
+  transition: 0.3s ease all;
+  cursor: default;
+  pointer-events: none;
+}
+
+.active {
+  background: tertiary;
+  width: 11px;
+  height: 11px;
+  opacity: 1;
+}

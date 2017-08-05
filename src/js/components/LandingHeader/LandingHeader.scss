@@ -1,0 +1,89 @@
+@value colors: "styles/colors.css";
+@value accent, primary from colors;
+
+.spacer {
+  height: 60px;
+}
+
+.header {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  background: transparent;
+  transition: background 0.3s ease;
+  &.filled {
+    background: primary;
+  }
+}
+
+.inner {
+  display: flex;
+  height: 60px;
+  padding-right: 0px !important;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navDesktop {
+  a {
+    color: white;
+    font-weight: bold;
+    position: relative;
+    padding: 10px;
+    margin: 0 10px;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 8px;
+      height: 2px;
+      background: white;
+      opacity: 0;
+      transform: opacity 0.2s ease;
+    }
+    &:hover {
+      text-decoration: none;
+      &:after {
+        opacity: 1;
+      }
+    }
+    &:last-child {
+      margin-right: 30px;
+    }
+  }
+
+  .linkActive {
+    color: accent;
+    &:after {
+      opacity: 1;
+      background: accent;
+    }
+  }
+}
+
+.logo {
+  height: 25px;
+  img {
+    height: 100%;
+  }
+}
+
+
+.button {
+  margin-left: 10px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 15px;
+  transition: 0.3s ease all;
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+}
+
+

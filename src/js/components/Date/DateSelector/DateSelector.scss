@@ -1,0 +1,26 @@
+@value colors: "styles/colors.css";
+@value zYellow, primary, primaryDarker from colors;
+
+.range {
+  white-space: nowrap;
+  > span {
+    padding: 8px 0;
+    font-size: 12px;
+    width: 35px;
+    height: 35px;
+    line-height: 20px;
+    margin: 0 4px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s ease all;
+    &:hover {
+      background: primaryDarker;
+    }
+    &.active {
+      background: zYellow !important;
+      color: primary;
+    }
+  }
+}

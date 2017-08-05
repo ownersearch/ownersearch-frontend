@@ -1,0 +1,32 @@
+@value colors: "styles/colors.css";
+@value zRed from colors;
+
+.container {
+  padding-top: 5px;
+}
+
+.message {
+  font-size: 11px;
+  text-align: right;
+  color: zRed;
+}
+
+.fadeEnter {
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 200ms ease;
+
+  &.fadeEnterActive {
+    max-height: 16px;
+    transition: all 200ms ease;
+  }
+}
+
+.fadeExit {
+  overflow: hidden;
+  max-height: 16px;
+  &.fadeExitActive {
+    max-height: 0px;
+    transition: all 200ms ease;
+  }
+}

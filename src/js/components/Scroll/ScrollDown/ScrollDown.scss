@@ -1,0 +1,12 @@
+.root {
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  z-index: 2;
+  padding: 5px;
+  @media (max-width: 599px) {
+    display: none;
+  }
+}

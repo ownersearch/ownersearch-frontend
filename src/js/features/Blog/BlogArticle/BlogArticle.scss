@@ -1,0 +1,60 @@
+@value colors: "styles/colors.css";
+@value zGreen from colors;
+
+.header {
+  min-height: 70vh;
+}
+
+.content {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.contentCol {
+  width: 600px;
+  @media (max-width: 959px) {
+    width: 100%;
+  } 
+}
+
+.blogContent {
+  font-size: 16px;
+  line-height: 1.6em;
+  > *:first-child {
+    margin-top: 0px !important;
+  }
+  p {
+    line-height: 1.6em;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    margin-top: 40px;
+  }
+  
+  :global(.aligncenter) {
+    margin: 0 auto;
+    display: block;
+  }
+
+  blockquote {
+    border-left: 5px solid zGreen;
+    margin-left: 0;
+    padding-left: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    p {
+      line-height: 1.6em;
+      margin: 0px;
+    }
+  }
+  
+  a {
+    text-decoration: underline;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,8 @@
+.row {
+  > * {
+    margin-bottom: 30px;
+    > div {
+      height: 220px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@value colors: "styles/colors.css";
+@value dark from colors;
+
+.currency {
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+.value {
+  font-size: 38px;
+  line-height: 1em;
+  color: black;
+}
+
+.foot {
+  margin-right: -10px;
+}
+
+.name {
+  margin-top: 10px;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.id {
+  font-size: 12px;
+}
+
+.rangeSelector {
+  background: dark;
+  padding: 30px 30px 60px;
+  .rangeDescrip {
+    color: white;
+    line-height: 1.5em;
+    font-size: 14px;
+    margin-bottom: 40px;
+    width: 70%;
+  }
+}

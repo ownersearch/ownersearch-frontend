@@ -1,0 +1,55 @@
+.container {
+  position: relative;
+}
+
+.input { 
+  display: block;
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #e2e2e2;
+  transition: 0.3s ease all;
+  width: 100%;
+  font-size: 20px;
+  color: black;
+  height: 50px;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-bottom: 2px solid #b2b2b2;
+  }
+}
+
+.suggestionsContainer { 
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: 0;
+  right: 0;
+}
+
+.suggestionsList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background: white;
+}
+
+.suggestion { 
+  padding: 15px 20px;
+  background: white;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  cursor: pointer;
+
+  &:last-child {
+    border-bottom: 1px solid #e2e2e2;
+  }  
+  &:first-child {
+    border-top: 1px solid #e2e2e2;
+  }
+}
+
+.suggestionHighlighted {
+  background: rgba(0, 0, 0, 0.03);
+}

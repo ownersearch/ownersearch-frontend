@@ -1,0 +1,35 @@
+.fadeEnter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.01;
+  z-index: 99;
+  &.fadeEnterActive {
+    transition: all 200ms ease;
+    opacity: 1;
+  }
+}
+
+//.fadeEnter {
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  right: 0;
+//  bottom: 0;
+//  z-index: 99;
+//  transform: translateX(100%);
+//  &.fadeEnterActive {
+//    transition: all 600ms ease;
+//    transform: translateX(0);
+//  }
+//}
+//
+//.fadeExit {
+//  transform: translateX(0);
+//  transition: all 600ms ease;
+//  &.fadeExitActive {
+//    transform: translateX(-100%);
+//  }
+//}

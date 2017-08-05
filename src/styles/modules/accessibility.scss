@@ -1,0 +1,10 @@
+@value colors: "styles/colors.css";
+@value accent from colors;
+
+button, input, a {
+  &:focus {
+    outline: none;
+//    box-shadow: 0 0 2px #DADADA;
+    box-shadow: none;
+  }
+}

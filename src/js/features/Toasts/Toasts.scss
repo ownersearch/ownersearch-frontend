@@ -1,0 +1,74 @@
+@value colors: "styles/colors.css";
+@value zRed from colors;
+
+.toastContainer {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  z-index: 10000;
+}
+
+.toast {
+  width: 400px;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  max-height: 100px;
+}
+
+@media (max-width: 599px) {
+  .toast {
+    width: 100%;
+  }
+  .toastContainer {
+    right: 0;
+    left: 0;
+  }
+}
+
+.toastInner {
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03), 0 2px 15px rgba(0,0,0,0.15);
+  line-height: 1.5em;
+  margin: 5px 15px 10px 15px;
+  padding: 10px 15px;
+  min-height: 60px;
+}
+
+.close:hover {
+  opacity: 0.6
+}
+
+.close {
+  margin-left: 5px;
+  transition: opacity 0.2s ease;
+  opacity: 0;
+  color: white;
+}
+
+/*Toast Types*/
+.error .toastInner {
+  background-color: zRed;
+  color: white;
+}
+
+.enter, .appear {
+  transition: max-height 300ms ease;
+  max-height: 0px;
+}
+
+.enterActive, .appearActive {
+  max-height: 100px;
+}
+
+.exit {
+  max-height: 100px;
+  transition: max-height 300ms ease;
+}
+
+.exitActive {
+  max-height: 0px;
+}
+
+

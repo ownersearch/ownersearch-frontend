@@ -1,0 +1,47 @@
+@value colors: "styles/colors.css";
+@value zRed from colors;
+
+.outer {
+  margin-bottom: 15px;
+}
+
+.standard {
+  display: block;
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #e2e2e2;
+  transition: 0.3s ease border;
+  width: 100%;
+  font-size: 20px;
+  color: black;
+  resize: vertical;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-bottom: 2px solid #b2b2b2;
+  }
+}
+
+
+.label {
+  color: #434a54;
+  font-size: 12px;
+  margin-bottom: 2px;
+  transition: 0.2s ease all;
+  display: block;
+  &.inactive {
+    transform: translateY(34px);
+    font-size: 14px;
+  }
+}
+
+.invalid {
+  .standard {
+    border-bottom: 2px solid zRed;
+    &:focus {
+      border-bottom: 2px solid zRed;
+    }
+  }
+}

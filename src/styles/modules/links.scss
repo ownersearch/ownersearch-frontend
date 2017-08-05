@@ -1,0 +1,12 @@
+@value colors: "styles/colors.css";
+@value primary from colors;
+
+a {
+  cursor: pointer;
+  color: primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

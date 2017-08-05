@@ -1,0 +1,42 @@
+@value colors: "styles/colors.css";
+@value primary, zLightBlue, tertiary from colors;
+
+@keyframes colorChange {
+  0% { background: primary; }
+  5% { background: zLightBlue; }
+  33% { background: zLightBlue; }
+  38% { background: tertiary; }
+  66% { background: tertiary; }
+  71% { background: primary; }
+  100% { background: primary; }
+}
+
+.dot {
+  background: primary;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.sm {
+  width: 6px;
+  height: 6px;
+  margin: 0 3px;
+}
+
+.dot1 {
+  animation: colorChange linear 1s infinite;
+}
+.dot2 {
+  animation: colorChange linear 1s infinite;
+  animation-delay: -333ms;
+}
+.dot3 {
+  animation: colorChange linear 1s infinite;
+  animation-delay: -666ms;
+}
+
+.shadow {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.30);
+}

@@ -1,0 +1,45 @@
+@value colors: "styles/colors.css";
+@value primary from colors;
+
+
+.forgotLink {
+  font-size: 12px;
+  color: #434a54;
+  margin-bottom: 15px;
+  &:hover {
+    color: #434a54;
+  }
+}
+
+.buttonsContainer {
+  margin-top: 50px;
+  button {
+    width: 235px;
+    @media (max-width: 599px) {
+      width: 200px;
+    }
+  }
+  button + button {
+    margin-top: 10px;
+  }
+  @media (max-width: 599px) {
+    margin-top: 20px;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.illustration {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 500px;
+  max-width: 900px !important;
+  height: auto;
+  z-index: 1;
+}

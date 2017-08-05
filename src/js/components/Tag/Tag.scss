@@ -1,0 +1,16 @@
+@value colors: "styles/colors.css";
+@value zLightBlue from colors;
+
+.tag {
+  min-width: 80px;
+  height: 30px;
+  border-radius: 15px;
+  padding: 0 15px;
+  border: solid 1.5px zLightBlue;
+  font-size: 10.5px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

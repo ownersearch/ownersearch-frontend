@@ -1,0 +1,19 @@
+.log {
+  padding: 30px 10px;
+}
+
+.logOuter {
+  background-repeat: repeat;
+  position: relative;
+  background-size: 12px 8px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+:global(#fxo-messenger-iframe) {
+  display: none;
+}
+
+:global(#fxo-widget-iframe) {
+  display: none;
+}

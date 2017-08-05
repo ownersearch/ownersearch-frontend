@@ -1,0 +1,19 @@
+@value colors: "styles/colors.css";
+@value primary, primaryBg, primaryLighter, primaryDarker from colors;
+@value secondary, secondaryDarker from colors;
+@value tertiary, tertiaryDarker from colors;
+@value accent, accentDarker from colors;
+@value facebook, facebookDarker from colors;
+@value google, googleDarker from colors;
+@value primaryBg: primaryBg from colors;
+@value dark from colors;
+
+
+@value zRed from colors;
+@value zBlue from colors;
+@value zGray from colors;
+@value zOrange from colors;
+@value zGreen from colors;
+@value zYellow from colors;
+@value zLightBlue from colors;
+@value zPurple from colors;

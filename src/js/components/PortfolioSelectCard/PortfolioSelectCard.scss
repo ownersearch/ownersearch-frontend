@@ -1,0 +1,31 @@
+.card {
+  background: white;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.checkbox {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+
+.image {
+  width: 240px;
+  height: 240px;
+  border: none;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 19px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.descrip {
+  font-size: 16px;
+  line-height: 1.8em;
+  margin-bottom: 20px;
+}

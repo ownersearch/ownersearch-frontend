@@ -1,0 +1,12 @@
+@value colors: "styles/colors.css";
+@value zGreen from colors;
+
+.dot {
+  position: absolute;
+  right: 0px;
+  top: 40px;
+  width: 8px;
+  height: 8px;
+  background: zGreen;
+  border-radius: 50%;
+}

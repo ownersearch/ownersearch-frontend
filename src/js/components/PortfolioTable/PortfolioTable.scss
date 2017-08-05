@@ -1,0 +1,27 @@
+.table {
+  border-top: 1px solid #e2e2e2;
+}
+
+.row {
+  border-bottom: 1px solid #e2e2e2;
+  height: 45px;
+}
+
+.icon {
+  margin-right: 10px;
+  svg {
+    width: 26px;
+    height: 26px;
+    color: #e2e2e2;
+  }
+}
+
+.name {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.percent {
+  font-size: 14px;
+  color: black;
+}

@@ -1,0 +1,19 @@
+.table {
+  > div {
+    font-size: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    > div:first-child {
+      
+    }    
+    > div:last-child {
+      color: black;
+      margin-left: 5px;
+    }
+  }
+}

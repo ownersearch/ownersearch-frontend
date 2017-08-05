@@ -1,8 +1,9 @@
-node_modules
-npm-debug.log
-.tmp
+.DS_Store
 .idea
-public
-compiled
-.swp
-.vscode
+*.iml
+node_modules
+build
+*.log*
+npm-debug.log
+.happypack
+reports/stats.json

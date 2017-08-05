@@ -1,0 +1,52 @@
+@value colors: "styles/colors.css";
+@value zGreen, dark from colors;
+
+.outer {
+  background: dark;
+  padding: 50px;
+  padding-top: 40px;
+}
+
+.title {
+  border-bottom: 1px solid #525a66;
+  padding-bottom: 20px;
+  font-size: 12px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.list {
+  border-left: 1px solid #525a66;
+  margin-left: 10px;
+}
+
+.listItem {
+  margin-bottom: 40px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.marker {
+  width: 25px;
+  height: 25px;
+  border: solid 1px #525a66;
+  background: dark;
+  border-radius: 50%;
+  margin-left: -12.5px;
+  margin-right: 20px;
+}
+.active {
+  .marker {
+    border: 6px solid zGreen;
+  }
+  .text {
+    opacity: 1;
+  }
+}
+
+.text {
+  color: white;
+  font-size: 12px;
+  opacity: 0.5;
+}

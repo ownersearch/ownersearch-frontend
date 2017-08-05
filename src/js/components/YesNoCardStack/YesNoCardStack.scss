@@ -1,0 +1,9 @@
+.stack {
+  height: 400px;
+  width: 500px;
+  position: relative;
+  
+  @media (max-width: 599px) {
+    width: 100%;
+  }  
+}

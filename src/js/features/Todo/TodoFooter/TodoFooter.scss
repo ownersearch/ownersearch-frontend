@@ -1,0 +1,24 @@
+@value colors: "styles/colors.css";
+@value dark from colors;
+
+.footer {
+  background: dark;
+  padding: 50px 0px 80px;
+  color: white;
+  @media (max-width: 599px) {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }  
+}
+
+.title {
+  border-bottom: 1px solid #525a66;
+  padding-bottom: 20px;
+  font-size: 12px;
+  margin-bottom: 60px;
+  color: white;
+    
+  @media (max-width: 599px) {
+    margin-bottom: 20px;
+  }  
+}

@@ -1,0 +1,113 @@
+.overlay {
+  @media (max-width: 599px) {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  display: none;
+}
+
+.sidebar {
+  overflow: hidden;
+//  width: 0px;
+  transition: 0.2s ease all;
+  background: #434a54;
+  border-right: 1px solid #525a66;
+  padding-top: 40px;
+  overflow-y: auto;
+
+  @media (max-width: 599px) {
+    z-index: 1001;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+  }
+
+//  &.open {
+//    width: 290px;
+//    max-width: 90vw;
+//  }
+}
+
+.fadeEnter {
+  width: 0;
+  transition: all 500ms ease;
+
+  &.fadeEnterActive {
+    width: 290px;
+    max-width: 90vw;
+    transition: all 500ms ease;
+  }
+}
+
+.fadeExit {
+  width: 290px;
+  max-width: 90vw;
+  &.fadeExitActive {
+    width: 0;
+    transition: all 500ms ease;
+  }
+}
+
+
+.inner {
+  width: 290px;
+}
+
+.link {
+  margin-bottom: 0px;
+  font-size: 14px;
+  padding: 15px 30px;
+  display: block;
+  color: white;
+  svg {
+    margin-right: 15px;
+    width: 28px;
+    height: 28px;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.active {
+  background: #3b424b;
+}
+
+.otherLink {
+  margin-bottom: 0px;
+  font-size: 13px;
+  padding: 15px 30px;
+  display: block;
+  color: white;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.divider {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 36px;
+  margin-right: 26px;
+  border-bottom: 1px solid #525a66;
+}
+
+.footer {
+  color: white;
+  padding: 40px 36px;
+  font-size: 12px;
+  
+  .copyright {
+    opacity: 0.5;
+  }
+  
+  .logout {
+  }
+}

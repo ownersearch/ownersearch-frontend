@@ -1,0 +1,111 @@
+@value colors: "styles/colors.css";
+@value accent, primary, secondary from colors;
+
+.center {
+  text-align: center;
+}
+
+.heading1 {
+  font-size: 45px;
+  font-weight: bold;
+  color: inherit;
+  line-height: 1.4em;
+  @media (max-width: 599px) {
+    font-size: 30px;
+  }
+}
+
+.heading2 {
+  font-size: 35px;
+  font-weight: bold;
+  color: inherit;
+  line-height: 1.4em;
+  @media (max-width: 599px) {
+    font-size: 25px;
+  }
+}
+
+.heading3 {
+  font-size: 25px;
+  font-weight: bold;
+  color: inherit;
+  line-height: 1.4em;
+  @media (max-width: 599px) {
+    font-size: 20px;
+  }
+}
+
+.heading4 {
+  font-size: 19px;
+  font-weight: bold;
+  color: inherit;
+  line-height: 1.4em;
+  @media (max-width: 599px) {
+    font-size: 18px;
+  }
+}
+
+.heading5 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: inherit;
+  line-height: 1.4em;
+}
+
+.descrip1 {
+  font-size: 20px;
+  line-height: 1.6em;
+  color: inherit;
+  @media (max-width: 599px) {
+    font-size: 16px;
+  }
+}
+.descrip2 {
+  font-size: 16px;
+  line-height: 1.4em;
+  color: inherit;
+  @media (max-width: 599px) {
+    font-size: 14px;
+  }
+}
+
+.descrip3 {
+  font-size: 13px;
+  line-height: 1.5em;
+  color: inherit;
+}
+
+.descrip4 {
+  font-size: 12px;
+  line-height: 1.5em;
+  color: inherit;
+}
+
+.divider {
+  width: 47px;
+  height: 7px;
+  background: #00dfff;
+  margin: 10px 0 20px;
+}
+
+.accent {
+  color: accent;
+}
+
+.primary {
+  color: primary;
+}
+
+.secondary {
+  color: secondary;
+}
+
+.noselect {
+-webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently */
+}

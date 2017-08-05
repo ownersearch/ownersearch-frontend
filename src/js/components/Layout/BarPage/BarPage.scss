@@ -1,0 +1,63 @@
+@value colors: "styles/colors.css";
+@value primary from colors;
+
+.outer {
+}
+
+.bar {
+  width: 340px;
+  background-color: primary;
+  min-height: 180px;
+  color: white;
+  position: relative;
+  
+  .texture {
+    background-repeat: repeat;
+    background-size: 10px;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .inner {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @media (max-width: 599px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+  
+  .title {
+    margin-top: 20px;
+    width: 200px;
+    line-height: 1.6em;
+  }
+  
+  img {
+    width: 160px;
+    @media (max-width: 599px) {
+      width: 100px;
+    }
+  }
+  @media (max-width: 900px) {
+    width: 200px;
+  }
+  @media (max-width: 599px) {
+    width: 100%;
+  }
+}
+
+
+.content {
+  padding: 40px 15px;
+  position: relative;
+  flex: 1 0 auto
+}

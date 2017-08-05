@@ -1,0 +1,14 @@
+.buttonsContainer {
+  width: 235px;
+  @media (max-width: 599px) {
+    width: 200px;
+  }
+  .divider {
+    text-align: center;
+    margin: 30px 0;
+  }
+  button + button {
+    margin-top: 10px;
+  }
+  margin-top: 40px;
+}

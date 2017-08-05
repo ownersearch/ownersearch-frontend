@@ -1,0 +1,23 @@
+.containerOuter {
+  width: 430px;
+  overflow: hidden;
+  @media (max-width: 599px) {
+    width: 100%;
+  }
+}
+
+.containerInner {
+  white-space: nowrap;
+  transition: 0.3s ease all;
+  
+  > * {
+    white-space: initial;
+    width: 430px;
+    @media (max-width: 599px) {
+      width: 100%;
+    }
+    display: inline-block;
+    vertical-align: text-top;
+    margin-bottom: 30px;
+  }
+}

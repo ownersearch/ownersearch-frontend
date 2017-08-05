@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'GalebBold';
+  src: url('GalebBold.eot');
+  src: url('GalebBold.woff2') format('woff2'),
+       url('GalebBold.woff') format('woff'),
+       url('GalebBold.ttf') format('truetype'),
+       url('GalebBold.svg#GalebBold') format('svg'),
+       url('GalebBold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

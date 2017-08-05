@@ -1,0 +1,11 @@
+.select {
+  background-position: right 0px top 20px;
+  background-repeat: no-repeat;
+  background-size: auto 30%;
+  
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  &::-ms-expand { display: none };
+}

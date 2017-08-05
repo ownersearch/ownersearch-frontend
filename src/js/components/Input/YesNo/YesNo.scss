@@ -1,0 +1,56 @@
+@value colors: "styles/colors.css";
+@value zGreen, zRed from colors;
+
+.option {
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 599px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease all;
+  }
+
+  &:hover:after{
+    opacity: 0.2;
+  }
+
+  img {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.optionYes {
+  border-color: zGreen;
+  &:after {
+    background: zGreen;
+  }
+}
+
+.optionNo {
+  border-color: zRed;
+  margin-left: 30px;
+  &:after {
+    background: zRed;
+  }
+}

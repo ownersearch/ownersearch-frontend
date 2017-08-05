@@ -1,0 +1,80 @@
+@value colors: "styles/colors.css";
+@value primary from colors;
+
+.crumbs {
+  @media (max-width: 599px) {
+    background: primary;
+  }  
+  @media (min-width: 600px) {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    color: white;
+    z-index: 2;
+  }
+}
+
+.circle {
+  width: 6px;
+  height: 6px;
+  background: #4b89dc;
+  border-radius: 50%;
+  margin-left: 30px;
+  @media (max-width: 599px) {
+    display: none;
+  }
+}
+
+.title {
+  @media (max-width: 599px) {
+    display: none;
+  }  
+  @media (min-width: 600px) {
+    margin-top: -5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.crumb {
+  @media (max-width: 599px) {
+    flex: 1;
+  }  
+  color: #4b89dc;
+  > a {
+    @media (max-width: 599px) {
+      text-align: center;
+      margin: 0;
+      padding: 15px 10px;
+    }
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    text-transform: uppercase;
+    margin-left: 30px;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:after {
+      content: ' ';
+      border-bottom: solid 1px #4b89dc;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      opacity: 0;
+    }
+  }
+}
+
+.active {
+  color: #ffffff;
+
+  @media (min-width: 600px) {
+    &:after {
+      opacity: 1;
+    }
+  }
+}

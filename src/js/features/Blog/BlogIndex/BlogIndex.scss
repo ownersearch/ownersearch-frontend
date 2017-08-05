@@ -1,0 +1,16 @@
+.heading {
+  padding-bottom: 300px;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  @media (max-width: 599px) {
+    margin-top: -350px;
+  }
+  margin-top: -400px;
+}
+
+.item {
+  margin-bottom: 30px;
+}

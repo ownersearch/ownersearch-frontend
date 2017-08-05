@@ -1,0 +1,19 @@
+@value colors: "styles/colors.css";
+@value zGreen from colors;
+
+.dragger {
+  cursor: move;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: zGreen;
+  position: absolute;
+  z-index: 5;
+  top: 65%;
+  transform: translate(-50%, -50%);
+
+  transition: 1s ease margin-top;
+    &:hover, &.active {
+    transition: none;
+  }
+}

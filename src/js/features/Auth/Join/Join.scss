@@ -1,0 +1,37 @@
+@value colors: "styles/colors.css";
+@value primary from colors;
+
+.title {
+  width: 340px;
+  text-align: center;
+  line-height: 1.6em;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.buttonsContainer {
+  width: 235px;
+  button + button {
+    margin-top: 10px;
+  }
+  @media (max-width: 599px) {
+    width: 200px;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.illustration {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 500px;
+  max-width: 900px !important;
+  height: auto;
+}

@@ -1,0 +1,27 @@
+@value primary: #3333ff;
+@value primaryBg: linear-gradient(329deg, #2323BD, #3333ff);
+@value primaryDarker: #2424be;
+@value primaryLighter: #3356ff;
+@value secondary: #007aff;
+@value secondaryDarker: #006be0;
+@value tertiary: #48cfae;
+@value tertiaryDarker: #41b79a;
+
+@value dark: #434a54;
+
+@value accent: #00dfff;
+@value accentDarker: #05bcd6;
+
+@value facebook: #2553b4;
+@value facebookDarker: #1e4596;
+@value google: #4285f4;
+@value googleDarker: #3a76d9;
+
+@value zRed: rgb(237, 85, 100);
+@value zBlue: rgb(51, 51, 255);
+@value zGray: rgb(67, 74, 84);
+@value zOrange: rgb(251, 110, 82);
+@value zGreen: rgb(72, 207, 174);
+@value zYellow: rgb(225, 206, 85);
+@value zLightBlue: rgb(75, 137, 220);
+@value zPurple: rgb(172, 146, 235);
