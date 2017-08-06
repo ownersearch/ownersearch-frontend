@@ -11,7 +11,7 @@ const GLOBALS = {
   GLOBAL_ENV: {
     NODE_ENV: JSON.stringify('development'),
     WEBSITE_URL: JSON.stringify('http://zuper.com.au'),
-    API_SERVER: JSON.stringify('http://localhost:3003'),
+    API_SERVER: JSON.stringify('http://localhost:3000'),
     WP_API_SERVER: JSON.stringify('wordpress.zuper.com.au'),
     TYPE: JSON.stringify('browser'),
   },

@@ -33,12 +33,13 @@ class LocationSearchForm extends Component {
     setTimeout(submit, 1)
   }
   render() {
-    const { user, sendEmailVerifyEmail, handleSubmit } = this.props
+    const { user, sendEmailVerifyEmail, handleSubmit, className } = this.props
 
     return (
       <form
         noValidate
         onSubmit={ handleSubmit }
+        className={ className }
       >
         <Field
           name="address"
