@@ -6,8 +6,8 @@ import sText from 'components/Text/Text.scss'
 
 export default class PeopleResults extends Component {
   componentWillMount() {
-    const { getPeople, name } = this.props
-    getPeople({ name })
+    const { getPeople, name, postcode } = this.props
+    getPeople({ name, postcode })
   }
   render() {
     const { people, className } = this.props

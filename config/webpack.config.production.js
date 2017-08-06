@@ -13,9 +13,10 @@ const GLOBALS = {
   },
   GLOBAL_ENV: {
     NODE_ENV: JSON.stringify('production'),
-    WEBSITE_URL: JSON.stringify('https://zuper.com.au'),
-    API_SERVER: JSON.stringify('https://zuperapistage.azurewebsites.net'),
-    WP_API_SERVER: JSON.stringify('wordpress.zuper.com.au'),
+    WEBSITE_URL: JSON.stringify('https://dev.ownersearch.com.au'),
+    API_SERVER: JSON.stringify('https://api.ownerseach.com.au'),
+    WP_API_SERVER: JSON.stringify('https://wordpress.ownersearch.com.au'),
+    TYPE: JSON.stringify('browser'),
     TYPE: JSON.stringify('browser'),
   },
   __DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || 'false')),

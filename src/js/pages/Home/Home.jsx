@@ -14,7 +14,7 @@ export default class Home extends Component {
       <div className="layout-row flex">
         <Map className={ cn('flex-60', s.map) } />
         <div className={ cn('flex-40 layout-column', s.results) }>
-          <LocationSearchForm className={  s.header } />
+          <LocationSearchForm className={ s.header } />
           <div className={ cn('flex', s.content) }>
             <LocationSearchResults />
           </div>

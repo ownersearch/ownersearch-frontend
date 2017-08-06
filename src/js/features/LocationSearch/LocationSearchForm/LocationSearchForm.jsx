@@ -24,13 +24,20 @@ class LocationSearchForm extends Component {
     const suburb = getComponent(components, 'locality')
     const postcode = getComponent(components, 'postal_code')
     const state = getComponent(components, 'administrative_area_level_1', true)
-    const subpremise = getComponent(components, 'subpremise')
+    const subPremise = getComponent(components, 'subpremise')
     const streetNum = getComponent(components, 'street_number')
     const route = getComponent(components, 'route')
-    const street = [subpremise ? subpremise+'/' : '', streetNum+' ', route].join('')
+    const street = [subPremise ? subPremise+'/' : '', streetNum+' ', route].join('')
     const fullAddress = `${street} ${suburb} ${state} ${postcode}`
     change('address', fullAddress)
-    setTimeout(submit, 1)
+    change('subPremise', subPremise)
+    change('streetNum', streetNum)
+    change('route', route)
+    change('suburb', suburb)
+    change('state', state)
+    change('postcode', postcode)
+    change('country', country)
+    setTimeout(() => submit('test'), 1)
   }
   render() {
     const { user, sendEmailVerifyEmail, handleSubmit, className } = this.props

@@ -5,7 +5,6 @@ import { merge } from 'lodash'
 import auth from 'features/Auth/Auth.reducer'
 import layout from 'features/Layout/Layout.reducer'
 import storeReducer from 'features/Store/Store.reducer'
-import analytics from 'features/Analytics/Analytics.reducer'
 import modal from 'features/Modal/Modal.reducer'
 import scroll from 'components/Scroll/Scroll.reducer'
 import toasts from 'features/Toasts/Toasts.reducer'
@@ -18,7 +17,6 @@ const splitReducers = combineReducers({
   locationSearch,
   routing,
   layout,
-  analytics,
   modal,
   scroll,
   toasts,

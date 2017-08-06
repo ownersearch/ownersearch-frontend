@@ -10,9 +10,9 @@ const GLOBALS = {
   },
   GLOBAL_ENV: {
     NODE_ENV: JSON.stringify('development'),
-    WEBSITE_URL: JSON.stringify('http://zuper.com.au'),
+    WEBSITE_URL: JSON.stringify('https://dev.ownersearch.com.au'),
     API_SERVER: JSON.stringify('http://localhost:3000'),
-    WP_API_SERVER: JSON.stringify('wordpress.zuper.com.au'),
+    WP_API_SERVER: JSON.stringify('https://wordpress.ownersearch.com.au'),
     TYPE: JSON.stringify('browser'),
   },
   __DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || 'true')),
