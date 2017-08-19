@@ -13,9 +13,13 @@ export default class LocaitonSearchResults extends Component {
       <div>
         { loading 
           ? <LoadingDots style={ { margin: '100px 0' } } /> 
-          :  <div>
-            { results.map(result => <LocationSearchResult key={ result.address } result={ result }/> )}
-          </div> }
+          : <div>
+              { results.map(result => (
+                <LocationSearchResult key={ result.address } result={ result }/>
+              )) }
+              { results.length === 0 && <div>No results found</div> }
+            </div> 
+        }
       </div>
     )
   }

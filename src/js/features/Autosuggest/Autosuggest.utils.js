@@ -7,6 +7,7 @@ export const getLocation = (address) => {
     params: {
       address,
       sensor: false,
+      components: 'country:Australia',
     },
     headers: {
       Authorization: null,
