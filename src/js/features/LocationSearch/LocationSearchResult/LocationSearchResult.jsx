@@ -15,8 +15,9 @@ export default class LocaitonSearchResult extends Component {
           <div>{ result.address }</div>
           <div>{ owners.map((owner, idx) => <span>{ idx > 0 ? ', ' : '' } { owner }</span>) }</div>
         </div>
-        { owners.map(owner => (
+        { owners.map((owner, idx) => (
           <PeopleResults
+            key={ idx }
             className={ s.people }
             name={ owner }
             suburb={ result.suburb }

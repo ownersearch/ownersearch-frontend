@@ -1,5 +1,4 @@
 import { loadUserData } from 'features/Auth/Auth.actions'
-import { superTick, getSuperFunds } from 'features/SuperAnn/SuperAnn.actions'
 
 export default (store) => {
   // Load the user data

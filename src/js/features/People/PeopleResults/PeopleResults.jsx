@@ -28,8 +28,8 @@ export default class PeopleResults extends Component {
                 { address }
               </div>
               <div className="flex-20" style={ { textAlign: 'right' } }>
-                { person.contacts && person.contacts.map(contact => (
-                  <span>{ contact.displayValue }</span>
+                { person.contacts && person.contacts.map((contact, idx) => (
+                  <span key={ idx }>{ contact.displayValue }</span>
                 ))}
               </div>
             </div>

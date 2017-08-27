@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Field, reduxForm } from 'redux-form'
+import { Form, Field, reduxForm } from 'redux-form'
 
 import { Input } from 'components/Input/Input'
 import Select from 'components/Input/Select'
@@ -18,8 +18,12 @@ const getComponent = (components, field, short) => {
 }
 
 class LocationSearchForm extends Component {
-  onLocationSelected = (event, { suggestion: { components } }) => {
-    const { change, name, submit } = this.props  
+  onSubmit = (formData) => {
+    const { search } = this.props
+    return search(formData)
+  }
+  onLocationSelected = (event, { suggestion: { components, coords } }) => {
+    const { change, name, submit, setQuery } = this.props
     const country = getComponent(components, 'country')
     const suburb = getComponent(components, 'locality')
     const postcode = getComponent(components, 'postal_code')
@@ -37,15 +41,21 @@ class LocationSearchForm extends Component {
     change('state', state)
     change('postcode', postcode)
     change('country', country)
-    setTimeout(() => submit('test'), 1)
+
+    setQuery({
+      components: { subPremise, streetNum, route, suburb, state, postcode, country },
+      string: fullAddress,
+      coords,
+    })
+    setTimeout(submit, 1)
   }
   render() {
     const { user, sendEmailVerifyEmail, handleSubmit, className } = this.props
 
     return (
-      <form
+      <Form
         noValidate
-        onSubmit={ handleSubmit }
+        onSubmit={ handleSubmit(this.onSubmit) }
         className={ className }
       >
         <Field
@@ -55,7 +65,7 @@ class LocationSearchForm extends Component {
           label="Street"
           validate={ [vRequired] }
         />
-      </form>
+      </Form>
     )
     
   }

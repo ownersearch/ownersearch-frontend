@@ -27,9 +27,7 @@ export default class AppRoot extends Component {
             { layout.header === 'landing' && <LandingHeader /> }
             { layout.header === 'app' && <Header location={ location } /> }
             { layout.header === 'either' && (isLoggedIn ? <Header location={ location } /> : <LandingHeader />) }
-            <AnimationPageTransition location={ location }>
-              { children }
-            </AnimationPageTransition>
+            { children }
           </div>
           <ModalContainer />
           <ToastsContainer />
@@ -37,7 +35,9 @@ export default class AppRoot extends Component {
       </div>
     )
   }
+            // <AnimationPageTransition location={ location }>
 
+            // </AnimationPageTransition>
 //  parseGlobalQueryParams = () => {
 //    const { location, isLoggedIn, getToken } = this.props
 //    const { query } = location

@@ -3,29 +3,27 @@ import cx from 'classnames'
 import s from './Map.scss'
 import ReactMapboxGl, { GeoJSONLayer } from 'react-mapbox-gl'
 
-const office = [ 151.221158, -33.830194 ]
-
 const accessToken = 'pk.eyJ1IjoiZGF2aWRyZXZheSIsImEiOiJjajJ4NnRpenMwMWJyMzJtbnZrc3A5cThyIn0.82nxtP2HGA8XEaWI9Hne0A'
-
-const geojson = {
-  type: 'FeatureCollection',
-  features: [{
-    type: 'Feature',
-    properties: {
-    },
-    geometry: {
-      type: 'Point',
-      coordinates: [
-        151.221158,
-        -33.830194,
-      ],
-    },
-  }],
-}
 
 export default class GeoJSONExample extends Component {
   render() {
-    const { className, children } = this.props
+    const { className, children, coords } = this.props
+
+    const center = coords.lat ? [coords.lng, coords.lat] : [151.221158, -33.830194]
+
+    const geojson = {
+      type: 'FeatureCollection',
+      features: coords.lat ? [{
+        type: 'Feature',
+        properties: {
+        },
+        geometry: {
+          type: 'Point',
+          coordinates: [coords.lng, coords.lat],
+        },
+      }] : [],
+    }
+
     return (
       <div className={ cx(s.map, className) }>
         <ReactMapboxGl
@@ -33,11 +31,11 @@ export default class GeoJSONExample extends Component {
             height: '100%',
             width: '100%',
           } }
-          scrollZoom={ false }
+          scrollZoom
           zoom={ [13] }
-          style="mapbox://styles/mapbox/light-v8"
+          style="mapbox://styles/davidrevay/cj6u9nib472xw2rp5qu6jlc7w"
           accessToken={ accessToken }
-          center={ office }
+          center={ center }
           movingMethod="jumpTo"
         >
           <GeoJSONLayer

@@ -14,7 +14,7 @@ export const getLocation = (address) => {
     },
   }).then(({ data }) => data.results.map(item => ({
     name: item.formatted_address,
-    geo: item.geometry.location,
+    coords: item.geometry.location,
     components: item.address_components,
   })))
 }
